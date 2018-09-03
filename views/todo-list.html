@@ -1,0 +1,10 @@
+<div class="card mt-3 p-3" ng-show="!!todos.length">
+    <h3>Lista de Todo</h3>
+    <p>Todal de itens: <b>{{ todos.length }}</b></p>
+    <ul class="list-group">
+        <li class="list-group-item d-flex flex-row justify-content-between align-items-center" ng-repeat="todoItem in todos">
+            {{ todoItem.title }}
+            <button ng-click="removeTodo(todoItem.id)" class="btn btn-link text-danger">x</button>
+        </li>
+    </ul>
+</div>
